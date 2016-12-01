@@ -1,0 +1,35 @@
+/*variables*/
+
+/*brand colors*/
+$primary-lighter: $green-500;
+$primary-color: $green-700;
+$primary-darker: $green-900;
+
+/*dark text on light backgrounds*/
+$dark-text: $grey-900;
+$secondary-text: $grey-600;
+$hint-text: $grey-500;
+$divide: $grey-300;
+
+/*light text on dark backgrounds*/
+$light-text: #fff;
+$secondary-light-text: rgba(255, 255, 255, .7);
+$hint-light-text: rgba(255, 255, 255, .5);
+$divide-light: rgba(255, 255, 255, .12);
+
+/*opacity*/
+$opacity-light: rgba(0, 0, 0, .38);
+$opacity: rgba(0, 0, 0, .54);
+$opacity-dark: rgba(0, 0, 0, .7);
+
+/*gradient*/
+$gradient-to-top: linear-gradient(to top, rgba(0, 0, 0, .87) 30%, transparent);
+$gradient-to-bottom: linear-gradient(to bottom, rgba(0, 0, 0, .87) 30%, transparent);
+
+/*font*/
+$regular-text-color: $dark-text;
+$regular-font: 'Open Sans', sans-serif;
+$serif-font: 'Roboto Slab', serif;
+$regular-font-size: 1.4rem;
+$header-line: 1.5;
+$paragraph-line: 1.75;

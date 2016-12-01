@@ -1,0 +1,19 @@
+{
+	"name": "template",
+	"private": true,
+	"dependencies": {},
+	"devDependencies": {
+		"chai": "^3.5.0",
+		"mocha": "^3.2.0"
+	},
+	"overrides": {
+		"slick-carousel": {
+			"main": [
+				"slick/slick.css",
+				"slick/slick.min.js",
+				"slick/ajax-loader.gif",
+				"slick/fonts/*"
+			]
+		}
+	}
+}
