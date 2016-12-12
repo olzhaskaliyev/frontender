@@ -1,41 +1,26 @@
 @@include('header.html')
+<div class="slider">
+    @@for (var i = 0; i < 3; i++) {
+    <div class="slide">
+        <div class="banner">
+            <div class="img-box" style="background-image: url('images/article.jpg')"></div>
+            <div class="title">Lorem ipsum dolor sit amet.</div>
+        </div>
+    </div>
+    }
+</div>
 <div class="container">
-	<div class="row">
-		<div class="col-md-8">
-			<div class="slider">
-				@@for (var i = 0; i < 3; i++) {
-				<div class="slide">
-					<div class="banner">
-						<div class="img-box" style="background-image: url('images/article.jpg')"></div>
-						<div class="title">Lorem ipsum dolor sit amet.</div>
-					</div>
-				</div>
-				}
-			</div>
-		</div>
-		<div class="col-md-4">
-			@@for (var i = 0; i < 4; i++) {
-			<div class="article-mini-row">
-				<div class="img-box" style="background-image: url('images/thumb.jpg')"></div>
-				<div class="title">Lorem ipsum dolor sit amet.</div>
-				<div class="description">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur aut commodi esse est illo inventore?
-				</div>
-			</div>
-			}
-		</div>
-	</div>
-	<div class="row">
-		@@for (var i = 0; i < 9; i++) {
-		<div class="article-grid col-md-4 col-sm-6">
-			<a href="article.html" class="img-box" style="background-image: url('images/thumb.jpg')"></a>
-			<a href="article.html" class="title">Lorem ipsum dolor sit amet.</a>
-			<div class="description">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur aut autem consequuntur corporis dolores eaque, et eveniet fugit maiores modi necessitatibus placeat quaerat quasi rerum, tenetur unde vel veniam!
-			</div>
-		</div>
-		}
-		<a href="articles.html" class="more button">Показать еще</a>
-	</div>
+    <div class="row">
+        @@for (var i = 0; i < 9; i++) {
+        <div class="article-grid col-md-4 col-sm-6">
+            <a href="article.html" class="img-box" style="background-image: url('images/thumb.jpg')"></a>
+            <a href="article.html" class="title">Lorem ipsum dolor sit amet.</a>
+            <div class="description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur aut autem consequuntur corporis dolores eaque, et eveniet fugit maiores modi necessitatibus placeat quaerat quasi rerum, tenetur unde vel veniam!
+            </div>
+        </div>
+        }
+        <a href="articles.html" class="more button">Показать еще</a>
+    </div>
 </div>
 @@include('footer.html')

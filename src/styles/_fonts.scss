@@ -3,73 +3,73 @@
 /*Open Sans*/
 
 @font-face {
-	font-family: 'Open Sans';
-	src: local('Open Sans'),
-	url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-	url('../fonts/OpenSans-Regular.woff') format('woff'),
-	url('../fonts/OpenSans-Regular.ttf') format('truetype');
-	unicode-range: U+020-07F, U+410-44F; //Latin & Cyrillic scripts
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+  url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/OpenSans-Regular.woff') format('woff'),
+  url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  unicode-range: U+020-07F, U+410-44F; //Latin & Cyrillic scripts
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	font-style: italic;
-	src: local('Open Sans Italic'),
-	url('../fonts/OpenSans-Italic.woff2') format('woff2'),
-	url('../fonts/OpenSans-Italic.woff') format('woff'),
-	url('../fonts/OpenSans-Italic.ttf') format('truetype');
-	unicode-range: U+021-07E, U+410-44F;
+  font-family: 'Open Sans';
+  font-style: italic;
+  src: local('Open Sans Italic'),
+  url('../fonts/OpenSans-Italic.woff2') format('woff2'),
+  url('../fonts/OpenSans-Italic.woff') format('woff'),
+  url('../fonts/OpenSans-Italic.ttf') format('truetype');
+  unicode-range: U+021-07E, U+410-44F;
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	font-weight: 600;
-	src: local('Open Sans'),
-	url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
-	url('../fonts/OpenSans-Semibold.woff') format('woff'),
-	url('../fonts/OpenSans-Semibold.ttf') format('truetype');
-	unicode-range: U+000-07F, U+410-44F;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  src: local('Open Sans'),
+  url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+  url('../fonts/OpenSans-Semibold.woff') format('woff'),
+  url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+  unicode-range: U+000-07F, U+410-44F;
 }
 
 @font-face {
-	font-family: 'Open Sans';
-	font-weight: bold;
-	src: local('Open Sans'),
-	url('../fonts/OpenSans-Bold.woff2') format('woff2'),
-	url('../fonts/OpenSans-Bold.woff') format('woff'),
-	url('../fonts/OpenSans-Bold.ttf') format('truetype');
-	unicode-range: U+000-07F, U+410-44F;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  src: local('Open Sans'),
+  url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('../fonts/OpenSans-Bold.woff') format('woff'),
+  url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  unicode-range: U+000-07F, U+410-44F;
 }
 
 /*Roboto Slab*/
 
 @font-face {
-	font-family: 'Roboto Slab';
-	font-weight: 300;
-	src: local('Roboto Slab'),
-	url('../fonts/RobotoSlab-Light.ttf') format('truetype');
-	unicode-range: U+020-07F, U+410-44F;
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  src: local('Roboto Slab'),
+  url('../fonts/RobotoSlab-Light.ttf') format('truetype');
+  unicode-range: U+020-07F, U+410-44F;
 }
 
 @font-face {
-	font-family: 'Roboto Slab';
-	src: local('Roboto Slab'),
-	url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
-	unicode-range: U+020-07F, U+410-44F;
+  font-family: 'Roboto Slab';
+  src: local('Roboto Slab'),
+  url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
+  unicode-range: U+020-07F, U+410-44F;
 }
 
 /*Tenge*/
 
 @font-face {
-	font-family: "Tenge";
-	src: local('Tenge'), url("../fonts/Tenge.ttf") format("truetype");
+  font-family: "Tenge";
+  src: local('Tenge'), url("../fonts/Tenge.ttf") format("truetype");
 }
 
 .tenge:after {
-	content: 'a';
-	margin-left: .5rem;
-	font-family: 'Tenge', sans-serif;
-	font-size: .95em;
-	font-weight: normal;
-	text-transform: lowercase;
+  content: 'a';
+  margin-left: .5rem;
+  font-family: 'Tenge', sans-serif;
+  font-size: .95em;
+  font-weight: normal;
+  text-transform: lowercase;
 }

@@ -3,177 +3,177 @@
 input,
 select,
 textarea {
-	margin-bottom: 2rem;
-	width: 100%;
-	height: 4rem;
-	border: solid 1px $grey-400;
-	border-radius: .4rem;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 4rem;
+  border: solid 1px $grey-400;
+  border-radius: .4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 textarea,
 select[multiple] {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	resize: vertical;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  resize: vertical;
 }
 
 .errorMessage {
-	transform: translateY(-1.3rem);
-	height: 0;
-	line-height: 1.2rem;
-	font-size: 1.2rem;
-	color: $red;
-	text-align: center;
-	white-space: nowrap;
+  transform: translateY(-1.3rem);
+  height: 0;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  color: $red;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .check-group {
-	margin-bottom: 1rem;
-	label {
-		margin-bottom: 1.5rem !important;
-	}
+  margin-bottom: 1rem;
+  label {
+    margin-bottom: 1.5rem !important;
+  }
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-	display: none;
-	+ label {
-		cursor: pointer;
-		position: relative;
-		display: inline-block;
-		vertical-align: top;
-		margin-right: -4px;
-		margin-bottom: 1.5rem;
-		padding-left: 2.6rem;
-		padding-right: 2.6rem;
-		&:before {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: .1rem;
-			display: block;
-			width: 1.8rem;
-			height: 1.8rem;
-			border: solid 1px $grey-600;
-			border-radius: 3px;
-		}
-		&:after {
-			content: "";
-			position: absolute;
-			left: .4rem;
-			top: .5rem;
-			display: block;
-			width: 1rem;
-			height: 1rem;
-			border-radius: 2px;
-			background: none;
-			transition: background-color .1s;
-		}
-	}
-	&:checked + label:after {
-		background-color: $primary-color;
-	}
+  display: none;
+  + label {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    margin-bottom: 1.5rem;
+    padding-left: 2.6rem;
+    padding-right: 2.6rem;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .1rem;
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+      border: solid 1px $grey-600;
+      border-radius: 3px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: .4rem;
+      top: .5rem;
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 2px;
+      background: none;
+      transition: background-color .1s;
+    }
+  }
+  &:checked + label:after {
+    background-color: $primary-color;
+  }
 }
 
 input[type="radio"] + label:before,
 input[type="radio"] + label:after {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 input[type="file"] {
-	display: none;
-	+ label {
-		display: block;
-		position: relative;
-		margin-bottom: 3rem;
-		height: 12.5rem;
-		border: solid 1px $grey-400;
-		border-radius: .5rem;
-		background-color: $divide;
-		transition: background-color .2s;
-		cursor: pointer;
-		&:hover {
-			background-color: $grey-400;
-		}
-		&.active:after {
-			content: '';
-			display: block;
-			position: absolute;
-			top: .5rem;
-			right: .5rem;
-			width: 3rem;
-			height: 3rem;
-			border-radius: .3rem;
-			background: $grey-400 url("../images/close.svg") no-repeat center;
-			background-size: 1.5rem;
-		}
-	}
+  display: none;
+  + label {
+    display: block;
+    position: relative;
+    margin-bottom: 3rem;
+    height: 12.5rem;
+    border: solid 1px $grey-400;
+    border-radius: .5rem;
+    background-color: $divide;
+    transition: background-color .2s;
+    cursor: pointer;
+    &:hover {
+      background-color: $grey-400;
+    }
+    &.active:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: .3rem;
+      background: $grey-400 url("../images/close.svg") no-repeat center;
+      background-size: 1.5rem;
+    }
+  }
 }
 
 button,
 .button,
 input[type="button"],
 input[type="submit"] {
-	cursor: pointer;
-	display: inline-block;
-	margin-bottom: 0;
-	width: auto;
-	padding: 1rem 2rem;
-	min-width: 13rem;
-	height: auto;
-	outline: none;
-	border: none;
-	border-radius: 2rem;
-	background: $primary-color;
-	color: $light-text;
-	font-size: 1.4rem;
-	line-height: 2rem;
-	text-align: center;
-	transition: all .2s;
-	&:hover {
-		background: $primary-darker;
-		color: $light-text !important;
-	}
-	&.white {
-		background: $white;
-		color: $primary-color;
-		&:hover {
-			background: $primary-color;
-			color: $light-text;
-		}
-	}
-	&.red {
-		background: $red;
-		&:hover {
-			background: $red-700;
-		}
-	}
-	&.ghost {
-		padding: .8rem 1.8rem;
-		border: solid 2px $primary-color;
-		background: none;
-		color: $primary-color;
-		&:hover {
-			background: $primary-color;
-			color: $light-text;
-		}
-		&.white {
-			border-color: $white;
-			color: $white;
-			&:hover {
-				background: $white;
-				color: $dark-text !important;
-			}
-		}
-		&.red {
-			border-color: $red;
-			color: $red;
-			&:hover {
-				background: $red;
-				color: $white;
-			}
-		}
-	}
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0;
+  width: auto;
+  padding: 1rem 2rem;
+  min-width: 13rem;
+  height: auto;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  background: $primary-color;
+  color: $light-text;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-align: center;
+  transition: all .2s;
+  &:hover {
+    background: $primary-darker;
+    color: $light-text !important;
+  }
+  &.white {
+    background: $white;
+    color: $primary-color;
+    &:hover {
+      background: $primary-color;
+      color: $light-text;
+    }
+  }
+  &.red {
+    background: $red;
+    &:hover {
+      background: $red-700;
+    }
+  }
+  &.ghost {
+    padding: .8rem 1.8rem;
+    border: solid 2px $primary-color;
+    background: none;
+    color: $primary-color;
+    &:hover {
+      background: $primary-color;
+      color: $light-text;
+    }
+    &.white {
+      border-color: $white;
+      color: $white;
+      &:hover {
+        background: $white;
+        color: $dark-text !important;
+      }
+    }
+    &.red {
+      border-color: $red;
+      color: $red;
+      &:hover {
+        background: $red;
+        color: $white;
+      }
+    }
+  }
 }

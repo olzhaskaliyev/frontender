@@ -1,26 +1,26 @@
 /*mobile menu*/
 
 @media (max-width: 991px) {
-	.mobile-menu {
-		position: fixed;
-		top: 0;
-		right: 0;
-		z-index: 3;
-		height: 100%;
-		transform: translateX(100%);
-		transition: transform .3s;
-		will-change: transform;
-		&.active {
-			transform: translateX(0);
-		}
-		.burger {
-			position: absolute;
-			top: 2.5rem;
-			right: -5.5rem;
-			width: 4rem;
-			height: 3rem;
-			background: url("../images/burger.svg") no-repeat center;
-			background-size: contain;
-		}
-	}
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform .3s;
+    will-change: transform;
+    &.active {
+      transform: translateX(0);
+    }
+    .burger {
+      position: absolute;
+      top: 2.5rem;
+      right: -5.5rem;
+      width: 4rem;
+      height: 3rem;
+      background: url("../images/burger.svg") no-repeat center;
+      background-size: contain;
+    }
+  }
 }
