@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let footerHeight = $('footer').innerHeight();
+    var footerHeight = $('footer').innerHeight();
     $('body').css({
         'paddingBottom': footerHeight
     });

@@ -89,7 +89,7 @@ gulp.task('fileinclude', () => {
 });
 
 // Минификация и Конкатинация скриптов и стилей, сборка HTML
-gulp.task('html', ['styles', 'scripts'], () => {
+gulp.task('html', ['fileinclude', 'styles', 'scripts'], () => {
     return gulp.src('.tmp/**/*.html')
         .pipe($.useref({searchPath: ['.tmp', 'src', '.']}))
         //.pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
@@ -122,7 +122,7 @@ gulp.task('scripts', () => {
     //.pipe($.sourcemaps.init())
     //.pipe($.babel())
     //.pipe($.sourcemaps.write('.'))
-        .pipe(gulp.dest('.tmp/scripts'))
+        .pipe(gulp.dest('dist/scripts'))
         .pipe(reload({stream: true}));
 });
 
@@ -138,7 +138,8 @@ gulp.task('fonts', () => {
     return gulp.src(require('main-bower-files')('**/*.{eot,svg,otf,ttf,woff,woff2}', function (err) {
     })
         .concat('src/fonts/**/*'))
-        .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
+        .pipe(gulp.dest('.tmp/fonts'))
+        .pipe(gulp.dest('dist/fonts'));
 });
 
 // Сборка разного в корне (favicon, robots, etc.)

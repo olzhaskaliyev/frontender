@@ -1,4 +1,13 @@
 /*header*/
 
 header {
+  .logo {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 }
