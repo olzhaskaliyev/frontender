@@ -118,11 +118,11 @@ gulp.task('styles', () => {
 // Компиляция Babel (ECMAScript 2015)
 gulp.task('scripts', () => {
     return gulp.src('src/scripts/**/*.js')
-    //.pipe($.plumber())
-    //.pipe($.sourcemaps.init())
-    //.pipe($.babel())
-    //.pipe($.sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/scripts'))
+        .pipe($.plumber())
+        .pipe($.sourcemaps.init())
+        .pipe($.babel())
+        .pipe($.sourcemaps.write('.'))
+        .pipe(gulp.dest('.tmp/scripts'))
         .pipe(reload({stream: true}));
 });
 
