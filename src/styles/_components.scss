@@ -1,60 +1,15 @@
-/*helpers*/
-
-.to-center {
-  text-align: center;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-.to-right {
-  text-align: right;
+li {
+  display: block;
 }
 
-.pull-right {
-  float: right;
+p {
+  margin-top: 0;
 }
-
-.to-mid {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.to-mid-flex {
-  display: flex;
-  align-items: center;
-}
-
-.margin-bottom-10 {
-  margin-bottom: 1rem;
-}
-
-.margin-bottom-20 {
-  margin-bottom: 2rem;
-}
-
-.margin-bottom-30 {
-  margin-bottom: 3rem;
-}
-
-.margin-bottom-50 {
-  margin-bottom: 5rem;
-}
-
-.margin-top-10 {
-  margin-top: 1rem;
-}
-
-.margin-top-20 {
-  margin-top: 2rem;
-}
-
-.margin-top-30 {
-  margin-top: 3rem;
-}
-
-.margin-top-50 {
-  margin-top: 5rem;
-}
-
-/*components*/
 
 a {
   color: inherit;
@@ -62,6 +17,9 @@ a {
   transition: color .2s;
   &:hover {
     color: $primary-color;
+  }
+  &:hover, &:active {
+    outline-width: 0;
   }
 }
 
@@ -72,6 +30,11 @@ hr {
   border: none;
   color: $divide;
   background-color: $divide;
+}
+
+img {
+  border: none;
+  max-width: 100%;
 }
 
 .img-box {
@@ -104,61 +67,10 @@ a.img-box {
 
 table {
   width: 100%;
-}
-
-.breadcrumbs {
-  padding: 1rem 0;
-  background: $divide;
-  li {
-    display: inline-block;
-    &:after {
-      content: " /";
-    }
-    &:last-child {
-      color: $primary-color;
-      &:after {
-        content: "";
-        display: none;
-      }
-    }
-  }
-}
-
-.pager {
-  margin-top: 3rem;
-  cursor: default;
-  font-size: 0;
-  line-height: 0;
-  text-align: center;
-  * {
-    font-size: $regular-font-size;
-    line-height: normal;
-  }
-  li {
-    display: inline-block;
-    margin-right: .7rem;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  a {
-    display: block;
-    width: 3rem;
-    line-height: 2.8rem;
-    border: solid 1px $grey;
-    transition: all .2s;
-    &:hover {
-      border-color: $primary-color;
-      background: $primary-color;
-      color: $light-text;
-    }
-  }
-  li.active a {
-    border-color: $primary-color;
-    background: $primary-color;
-    color: $light-text;
-  }
-  li.disabled {
-    display: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  td,
+  th {
+    padding: 0;
   }
 }

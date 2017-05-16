@@ -1,10 +1,8 @@
-/*vendors*/
-
 /*Browser Upgrade*/
 
 .browserupgrade {
   margin: 0;
-  padding: 1.5rem;
+  padding: 15px;
   background: $red;
   color: $light-text;
   text-align: center;
@@ -15,117 +13,4 @@
       color: inherit;
     }
   }
-}
-
-/*Slick-Carousel*/
-
-.slick-slide:focus {
-  outline: none;
-}
-
-.slick-arrow {
-  opacity: .5;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  width: 2rem;
-  height: 100%;
-  background: $grey-900 url("../images/arrow.svg") no-repeat center;
-  background-size: 1rem;
-  cursor: pointer;
-  transition: opacity .2s;
-  will-change: opacity;
-  &:hover {
-    opacity: .8;
-  }
-}
-
-.slick-prev {
-  left: 0;
-  transform: rotate(180deg);
-}
-
-.slick-next {
-  right: 0;
-}
-
-.slick-dots {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-  bottom: -1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  li {
-    float: left;
-    display: block;
-    margin: 0 5px;
-    .slick-dot {
-      display: block;
-      width: 1rem;
-      height: 1rem;
-      border: none;
-      border-radius: 50%;
-      background: #ccc;
-      cursor: pointer;
-      transition: background .2s;
-    }
-    &.slick-active .slick-dot,
-    &:hover .slick-dot {
-      background: $primary-color;
-    }
-  }
-}
-
-/*Jquery UI*/
-
-.ui-widget-overlay {
-  background: $black;
-  opacity: .25;
-}
-
-.ui-corner-all {
-  border-radius: 0;
-}
-
-.ui-dialog {
-  position: fixed !important;
-  max-width: 50rem;
-  width: 100% !important;
-  max-height: 100%;
-  padding: 0;
-  box-shadow: 0 0 20px 0 $opacity;
-  border-radius: 1rem;
-  .ui-widget-header,
-  .ui-dialog-titlebar,
-  .ui-dialog-titlebar-close {
-    display: none;
-  }
-  .ui-dialog-content {
-    max-height: 80rem !important;
-    padding: 0;
-    overflow: auto;
-  }
-}
-
-.ui-widget {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-.ui-widget-content {
-  background: $white;
-  color: inherit;
-  &.ui-widget-content {
-    border: none;
-  }
-  a {
-    color: inherit;
-  }
-}
-
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
-  font-family: inherit;
-  font-size: inherit;
 }

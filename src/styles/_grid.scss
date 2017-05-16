@@ -1,19 +1,17 @@
-/*grid*/
-
 .container {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  margin-left: -15px;
+  margin-right: -15px;
   &.no-margin {
     margin-left: 0;
     margin-right: 0;
@@ -21,11 +19,11 @@
       padding-left: 0;
       padding-right: 0;
       .row {
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
+        margin-left: -15px;
+        margin-right: -15px;
         [class*=col-] {
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
+          padding-left: 15px;
+          padding-right: 15px;
         }
       }
     }
@@ -38,8 +36,8 @@
 [class*=col-] {
   flex: 0 0 auto;
   box-sizing: border-box;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /*mobile*/
@@ -97,13 +95,13 @@
 /*screen (hd)*/
 @media (min-width: 1200px) {
   .container {
-    max-width: 120rem;
+    max-width: 1200px;
   }
   .container.fluid {
     max-width: none;
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .col-lg-0 { display: none; }
   .col-lg-1 { flex-basis: 8.33333333%; max-width: 8.33333333%; }
@@ -124,8 +122,8 @@
 /*screen (fullhd)*/
 @media (min-width: 1600px) {
   .container.wide {
-    max-width: 160rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    max-width: 1600px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }

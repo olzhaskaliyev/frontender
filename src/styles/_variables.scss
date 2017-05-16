@@ -1,5 +1,3 @@
-/*variables*/
-
 /*brand colors*/
 $primary-lighter: $blue-400;
 $primary-color: $blue;
@@ -29,7 +27,7 @@ $gradient-to-bottom: linear-gradient(to bottom, rgba(0, 0, 0, .87) 30%, transpar
 /*font*/
 $regular-text-color: $dark-text;
 $regular-font: 'Open Sans', sans-serif;
-$serif-font: 'Roboto Slab', serif;
-$regular-font-size: 1.4rem;
+$regular-font-size: 16px;
+$regular-line: 1.2;
 $header-line: 1.5;
 $paragraph-line: 1.75;

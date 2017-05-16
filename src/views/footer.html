@@ -1,34 +1,12 @@
 <footer>
-    <div class="container">
-        <div class="copyright">
-            Powered By <a href="">Транспорт.kz</a> © 2016
-        </div>
-        <div class="developer">
-            © 2016 Сайт разработан <a href="http://luxystech.com" target="_blank">ТОО "Luxystech"</a>
-        </div>
-    </div>
+
 </footer>
-<div id="login-dialog">
-</div>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function () {
-        $("#login-dialog").dialog({
-            dialogClass: 'login-dialog',
-            autoOpen: false,
-            modal: true,
-            title: "Войти"
-        });
-        $(document).on('click', '.login', function () {
-            $('#login-dialog').dialog('open');
-        });
-    });
-</script>
 <!-- build:js scripts/libraries.min.js -->
 <!-- bower:js -->
 <!-- endbower -->
 <!-- endbuild -->
+<!-- build:js scripts/main.min.js -->
 <script src="scripts/main.js"></script>
+<!-- endbuild -->
 </body>
 </html>
