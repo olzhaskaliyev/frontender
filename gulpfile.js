@@ -15,7 +15,6 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 gulp.task('wiredep', () => {
     gulp.src('src/**/*.html')
         .pipe(wiredep({
-            exclude: 'bower_components/jquery/',
             ignorePath: /^(\.\.\/)*\.\./
         }))
         .pipe(gulp.dest('src'));
@@ -65,12 +64,19 @@ gulp.task('default', () => {
 });
 
 // Сборка верстки
-gulp.task('build', ['wiredep', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
+gulp.task('default', () => {
+    return new Promise(resolve => {
+        dev = false;
+        runSequence(['clean', 'wiredep'], 'build', resolve);
+    });
+});
+
 // Обзор собранной верстки
-gulp.task('serve:dist', () => {
+gulp.task('serve:dist', ['default'], () => {
     browserSync.init({
         notify: false,
         port: 9000,
@@ -93,9 +99,9 @@ gulp.task('html', ['fileinclude', 'styles', 'scripts'], () => {
     return gulp.src('.tmp/**/*.html')
         .pipe($.useref({searchPath: ['.tmp', 'src', '.']}))
         //.pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
-        .pipe($.if('*.html', $.fileInclude({prefix: '@@', basepath: 'src/views/'})))
-        .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
-        .pipe($.if('*.js', $.uglify()))
+        .pipe($.if(/\.html$/, $.fileInclude({prefix: '@@', basepath: 'src/views/'})))
+        .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
+        .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
         .pipe(gulp.dest('dist'));
 });
 
@@ -103,14 +109,14 @@ gulp.task('html', ['fileinclude', 'styles', 'scripts'], () => {
 gulp.task('styles', () => {
     return gulp.src('src/styles/*.scss')
         .pipe($.plumber())
-        .pipe($.sourcemaps.init())
+        .pipe($.if(dev, $.sourcemaps.init()))
         .pipe($.sass.sync({
             outputStyle: 'expanded',
             precision: 10,
             includePaths: ['.']
         }).on('error', $.sass.logError))
         .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-        .pipe($.sourcemaps.write())
+        .pipe($.if(dev, $.sourcemaps.write()))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe(reload({stream: true}));
 });
@@ -119,9 +125,9 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
     return gulp.src('src/scripts/**/*.js')
         .pipe($.plumber())
-        .pipe($.sourcemaps.init())
+        .pipe($.if(dev, $.sourcemaps.init()))
         .pipe($.babel())
-        .pipe($.sourcemaps.write('.'))
+        .pipe($.if(dev, $.sourcemaps.write('.')))
         .pipe(gulp.dest('.tmp/scripts'))
         .pipe(reload({stream: true}));
 });
@@ -153,7 +159,7 @@ gulp.task('extras', () => {
 });
 
 // Валидация скриптов
-function lint(files, options) {
+function lint(files) {
     return gulp.src(files)
         .pipe($.eslint({fix: true}))
         .pipe(reload({stream: true, once: true}))
