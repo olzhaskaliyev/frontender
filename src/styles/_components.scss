@@ -37,7 +37,7 @@ img {
   max-width: 100%;
 }
 
-.img-box {
+[style*="background-image"] {
   display: block;
   position: relative;
   margin: auto;
@@ -45,17 +45,9 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-height: 100%;
-    max-width: none;
-  }
 }
 
-a.img-box {
+a[style*="background-image"] {
   transition: filter .2s;
   &:hover, &:focus {
     outline: none;
@@ -67,7 +59,6 @@ a.img-box {
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   td,
