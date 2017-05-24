@@ -13,4 +13,12 @@
   .description {
     margin-bottom: 10px;
   }
+  .date {
+    color: $secondary-text;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
