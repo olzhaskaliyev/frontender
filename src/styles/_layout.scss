@@ -1,11 +1,31 @@
 html {
+  height: 100%;
   line-height: $regular-line;
 }
 
 body {
+  position: relative;
   margin: 0;
+  min-height: 100%;
   color: $regular-text-color;
   font-family: $regular-font;
   font-size: $regular-font-size;
   line-height: $regular-line;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }

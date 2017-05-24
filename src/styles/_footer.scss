@@ -1,0 +1,17 @@
+footer {
+  background-color: $grey-800;
+  color: $white;
+  font-size: 14px;
+  .container {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a {
+    color: $primary-lighter;
+    &:hover {
+      color: inherit;
+    }
+  }
+}

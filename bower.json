@@ -3,10 +3,21 @@
   "private": true,
   "dependencies": {
     "jquery": "^3.2.1",
-    "normalize-css": "normalize.css#^7.0.0"
+    "normalize-css": "normalize.css#^7.0.0",
+    "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
+  },
+  "overrides": {
+    "slick-carousel": {
+      "main": [
+        "slick/slick.css",
+        "slick/slick.min.js",
+        "slick/ajax-loader.gif",
+        "slick/fonts/*"
+      ]
+    }
   }
 }

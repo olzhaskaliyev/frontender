@@ -1,0 +1,31 @@
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    right: 15px;
+    top: 20px;
+    width: 40px;
+    height: 30px;
+    transition: right .2s;
+    &.active {
+      right: 315px;
+    }
+  }
+  .mobile-menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transform: translateX(100%);
+    background-color: $white;
+    transition: transform .3s;
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}

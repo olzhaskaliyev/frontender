@@ -1,0 +1,16 @@
+.article-card {
+  margin-bottom: 30px;
+  .img-box {
+    margin-bottom: 10px;
+    height: 230px;
+  }
+  .title {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .description {
+    margin-bottom: 10px;
+  }
+}

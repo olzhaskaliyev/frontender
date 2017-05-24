@@ -9,7 +9,7 @@ const reload = browserSync.reload;
 var dev = true;
 
 // Очистка места сборки
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['.tmp', 'build']));
 
 // Интеграция библиотек
 gulp.task('wiredep', () => {
@@ -65,10 +65,10 @@ gulp.task('default', () => {
 
 // Сборка верстки
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-    return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+    return gulp.src('build/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('default', () => {
+gulp.task('build-production', () => {
     return new Promise(resolve => {
         dev = false;
         runSequence(['clean', 'wiredep'], 'build', resolve);
@@ -76,12 +76,12 @@ gulp.task('default', () => {
 });
 
 // Обзор собранной верстки
-gulp.task('serve:dist', ['default'], () => {
+gulp.task('serve:build', ['build-production'], () => {
     browserSync.init({
         notify: false,
         port: 9000,
         server: {
-            baseDir: ['dist']
+            baseDir: ['build']
         }
     });
 });
@@ -102,7 +102,7 @@ gulp.task('html', ['fileinclude', 'styles', 'scripts'], () => {
         .pipe($.if(/\.html$/, $.fileInclude({prefix: '@@', basepath: 'src/views/'})))
         .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
         .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('build'));
 });
 
 // Компиляция SASS и автопрефикс
@@ -136,7 +136,7 @@ gulp.task('scripts', () => {
 gulp.task('images', () => {
     return gulp.src('src/images/**/*')
         .pipe($.cache($.imagemin()))
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('build/images'));
 });
 
 // Сборка шрифтов
@@ -145,7 +145,7 @@ gulp.task('fonts', () => {
     })
         .concat('src/fonts/**/*'))
         .pipe(gulp.dest('.tmp/fonts'))
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('build/fonts'));
 });
 
 // Сборка разного в корне (favicon, robots, etc.)
@@ -155,7 +155,7 @@ gulp.task('extras', () => {
         '!src/*.html'
     ], {
         dot: true
-    }).pipe(gulp.dest('dist'));
+    }).pipe(gulp.dest('build'));
 });
 
 // Валидация скриптов

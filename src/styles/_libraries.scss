@@ -4,13 +4,74 @@
   margin: 0;
   padding: 15px;
   background: $red;
-  color: $light-text;
+  color: $white;
   text-align: center;
   a {
     font-weight: bold;
     text-decoration: underline;
     &:hover {
       color: inherit;
+    }
+  }
+}
+
+/*Slick-Carousel*/
+
+.slick-slide:focus {
+  outline: none;
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  margin-top: -25px;
+  width: 30px;
+  height: 50px;
+  background: rgba(0,0,0,.3) url("../images/arrow.svg") no-repeat center;
+  background-size: 10px;
+  cursor: pointer;
+  transition: background-color .2s;
+  &:hover {
+    background-color: rgba(0,0,0,.6);
+  }
+}
+
+.slick-prev {
+  left: 0;
+  transform: rotate(180deg);
+  border-radius: 3px 0 0 3px;
+}
+
+.slick-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slick-dots {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  li {
+    float: left;
+    display: block;
+    margin: 0 5px;
+    .slick-dot {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: solid 1px $primary-color;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color .2s;
+    }
+    &.slick-active .slick-dot,
+    &:hover .slick-dot {
+      background-color: $primary-color;
     }
   }
 }
