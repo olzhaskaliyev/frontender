@@ -107,7 +107,7 @@ gulp.task('html', ['fileinclude', 'styles', 'scripts'], () => {
 
 // Компиляция SASS и автопрефикс
 gulp.task('styles', () => {
-    return gulp.src('src/styles/*.scss')
+    return gulp.src('src/styles/**/*.scss')
         .pipe($.plumber())
         .pipe($.if(dev, $.sourcemaps.init()))
         .pipe($.sass.sync({

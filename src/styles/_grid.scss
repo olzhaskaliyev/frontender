@@ -5,15 +5,15 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $regular-margin;
+  padding-right: $regular-margin;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -$regular-margin;
+  margin-right: -$regular-margin;
   &.no-margin {
     margin-left: 0;
     margin-right: 0;
@@ -21,11 +21,11 @@
       padding-left: 0;
       padding-right: 0;
       .row {
-        margin-left: -15px;
-        margin-right: -15px;
+        margin-left: -$regular-margin;
+        margin-right: -$regular-margin;
         [class*=col-] {
-          padding-left: 15px;
-          padding-right: 15px;
+          padding-left: $regular-margin;
+          padding-right: $regular-margin;
         }
       }
     }
@@ -34,8 +34,8 @@
 
 [class*=col-] {
   flex: 0 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $regular-margin;
+  padding-right: $regular-margin;
 }
 
 /*mobile*/
@@ -94,9 +94,8 @@
   }
   .container.fluid {
     max-width: none;
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: $regular-margin*2;
+    padding-right: $regular-margin*2;
   }
   .col-lg-1 { flex-basis: 8.33333333%; max-width: 8.33333333%; }
   .col-lg-2 { flex-basis: 16.66666667%; max-width: 16.66666667%; }
@@ -117,7 +116,5 @@
 @media (min-width: 1600px) {
   .container.wide {
     max-width: 1600px;
-    padding-left: 30px;
-    padding-right: 30px;
   }
 }

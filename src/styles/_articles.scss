@@ -1,7 +1,11 @@
+.content {
+  padding: $regular-margin*3 0;
+}
+
 .article-card {
-  margin-bottom: 30px;
+  margin-bottom: $regular-margin*2;
   .img-box {
-    margin-bottom: 10px;
+    margin-bottom: $regular-margin;
     height: 230px;
   }
   .title {
@@ -11,7 +15,7 @@
     font-weight: bold;
   }
   .description {
-    margin-bottom: 10px;
+    margin-bottom: $regular-margin;
   }
   .date {
     color: $secondary-text;
