@@ -41,18 +41,6 @@ $(document).ready(function () {
         mobileMenuConstructor();
     });
 
-    /*dropdowns*/
-
-    $(document).on('click', '.dropdown', function () {
-        $(this).toggleClass('active');
-    });
-
-    $(document).click(function (e) {
-        if ($('.dropdown').hasClass('active') && !$(e.target).closest('.dropdown').length) {
-            $('.dropdown').removeClass('active');
-        }
-    });
-
     /*sliders*/
 
     $('.slider').slick({
