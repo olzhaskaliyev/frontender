@@ -1,23 +1,12 @@
 // bower:scss
 // endbower
 
-@import "colors";
-@import "variables";
+@import "colors", "variables";
 @import "resets";
-
 @import "grid";
 @import "fonts";
-
-@import "libraries";
-@import "components";
-@import "helpers";
+@import "libraries", "components", "helpers";
 @import "forms";
-
-@import "layout";
-@import "header";
-@import "index";
-@import "articles";
-@import "footer";
-
-@import "media-queries";
-@import "mobile-menu";
+@import "layout", "header", "footer";
+@import "index", "articles";
+@import "media-queries", "mobile-menu";
