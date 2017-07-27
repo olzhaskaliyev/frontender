@@ -6,10 +6,6 @@
     "normalize-css": "normalize.css#^7.0.0",
     "slick-carousel": "^1.6.0"
   },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
-  },
   "overrides": {
     "slick-carousel": {
       "main": [
