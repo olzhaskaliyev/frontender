@@ -1,6 +1,37 @@
-@@include('header.html')
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frontender</title>
+    <!-- build:css styles/libraries.min.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.min.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста,
+    <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить совместимость</p>
+<![endif]-->
+<header>
+    <div class="container fluid">
+        <a href="" class="logo">Frontender</a>
+        <nav>
+            <a href="">Главная</a>
+            <a href="">Каталог</a>
+            <a href="">Контакты</a>
+        </nav>
+    </div>
+</header>
 <div class="slider">
-    @@for (var i = 0; i < 3; i++) {
     <div class="slide img-box" style="background-image: url('images/article (3).jpg')">
         <div class="container">
             <div class="header">Frontender 2017</div>
@@ -10,14 +41,20 @@
             <a href="" class="button">Details</a>
         </div>
     </div>
-    }
+    <div class="slide img-box" style="background-image: url('images/article (3).jpg')">
+        <div class="container">
+            <div class="header">Frontender 2017</div>
+            <div class="description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at commodi dignissimos, doloribus ea eum ex explicabo facere itaque labore omnis praesentium qui quia quisquam rem repellat, sed, veritatis vero!
+            </div>
+            <a href="" class="button">Details</a>
+        </div>
+    </div>
 </div>
-
 <section class="bestsellers">
     <div class="container">
         <div class="header">Бестселлеры</div>
         <div class="row">
-            @@for (var i = 0; i < 6; i++) {
             <div class="col-md-4">
                 <div class="article-card">
                     <a href="" class="img-box" style="background-image: url('images/article (3).jpg')"></a>
@@ -29,9 +66,79 @@
                     </div>
                 </div>
             </div>
-            }
+            <div class="col-md-4">
+                <div class="article-card">
+                    <a href="" class="img-box" style="background-image: url('images/article (3).jpg')"></a>
+                    <a href="" class="title">Lorem ipsum dolor</a>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div class="footer">
+                        <div class="date">24.05.2017</div>
+                        <a href="" class="details button">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="article-card">
+                    <a href="" class="img-box" style="background-image: url('images/article (3).jpg')"></a>
+                    <a href="" class="title">Lorem ipsum dolor</a>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div class="footer">
+                        <div class="date">24.05.2017</div>
+                        <a href="" class="details button">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="article-card">
+                    <a href="" class="img-box" style="background-image: url('images/article (3).jpg')"></a>
+                    <a href="" class="title">Lorem ipsum dolor</a>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div class="footer">
+                        <div class="date">24.05.2017</div>
+                        <a href="" class="details button">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="article-card">
+                    <a href="" class="img-box" style="background-image: url('images/article (3).jpg')"></a>
+                    <a href="" class="title">Lorem ipsum dolor</a>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div class="footer">
+                        <div class="date">24.05.2017</div>
+                        <a href="" class="details button">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="article-card">
+                    <a href="" class="img-box" style="background-image: url('images/article (3).jpg')"></a>
+                    <a href="" class="title">Lorem ipsum dolor</a>
+                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                    <div class="footer">
+                        <div class="date">24.05.2017</div>
+                        <a href="" class="details button">Details</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <a href="" class="more button">More</a>
     </div>
 </section>
-@@include('footer.html')
+<footer>
+    <div class="container fluid">
+        <div class="copurights">© 2017 <a href="" target="_blank">Frontender</a></div>
+        <div class="developer">Developed by <a href="" target="_blank">Olzhas Kaliyev</a></div>
+    </div>
+</footer>
+<!-- build:js scripts/libraries.min.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js scripts/main.min.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
