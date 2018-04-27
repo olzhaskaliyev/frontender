@@ -1,28 +1,29 @@
-.content {
-  padding: $regular-margin*3 0;
-}
+/*Articles*/
 
 .article-card {
-  margin-bottom: $regular-margin*2;
+  margin-bottom: 2rem;
   .img-box {
-    margin-bottom: $regular-margin;
-    height: 230px;
+    margin-bottom: .5rem;
+    padding-top: 62.5%;
+    border: solid 1px $divide;
+    border-radius: .25rem;
   }
   .title {
     display: inline-block;
-    margin-bottom: 5px;
-    font-size: 18px;
-    font-weight: bold;
+    margin-bottom: .5rem;
+    font-family: $header-font;
+    font-size: 1.25rem;
   }
   .description {
-    margin-bottom: $regular-margin;
-  }
-  .date {
-    color: $secondary-text;
+    font-size: .875rem;
   }
   .footer {
+    margin-top: .5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+  }
+  .price {
+    font-size: 1.25rem;
   }
 }

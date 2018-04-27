@@ -1,6 +1,9 @@
-.idea
-node_modules
-bower_components
-.tmp
-dist
-design
+/.idea/
+/node_modules/
+/bower_components/
+/.tmp/
+/temp/
+/dist/
+/build/
+/psd/
+/design/

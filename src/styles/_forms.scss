@@ -1,8 +1,4 @@
-label {
-  display: inline-block;
-  color: $secondary-text;
-  margin-bottom: 5px;
-}
+/*Forms*/
 
 input[type="text"],
 input[type="search"],
@@ -12,13 +8,14 @@ input[type="date"],
 input[type="datetime"],
 select,
 textarea {
-  margin-bottom: 15px;
+  margin-bottom: .5rem;
   width: 100%;
-  height: 30px;
+  height: 2rem;
   outline: none;
   border: solid 1px $divide;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-radius: .25rem;
   transition: border-color .2s;
   &:focus {
     border-color: $primary-color;
@@ -28,8 +25,8 @@ textarea {
 textarea,
 select[multiple] {
   height: auto;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   resize: none;
 }
 
@@ -37,35 +34,33 @@ input[type="checkbox"],
 input[type="radio"] {
   display: none;
   + label {
+    display: block;
     cursor: pointer;
+    padding-left: 1.5rem;
+    line-height: 1.25;
     position: relative;
-    vertical-align: top;
-    margin-right: -4px;
-    margin-bottom: 20px;
-    padding: 10px;
-    padding-left: 36px;
-    border: solid 1px $divide;
-    transition: background-color .2s;
     &:before {
       content: '';
       display: block;
       position: absolute;
-      left: 10px;
-      top: 10px;
-      width: 18px;
-      height: 18px;
-      border: solid 2px $grey-600;
+      left: 0;
+      top: 2px;
+      width: 1rem;
+      height: 1rem;
+      border: solid 1px $grey-400;
       border-radius: 3px;
-      background-color: $grey-200;
+      background-color: $white;
     }
     &:after {
       content: '';
       display: block;
       position: absolute;
-      left: 14px;
-      top: 12px;
-      color: $primary-color;
-      font-size: 13px;
+      left: 3px;
+      top: 5px;
+      width: .625rem;
+      height: .625rem;
+      border-radius: 2px;
+      background-color: $primary-color;
       opacity: 0;
       transition: opacity .2s;
     }
@@ -82,17 +77,64 @@ input[type="radio"] + label:after {
   border-radius: 50%;
 }
 
+input[type="file"] {
+  display: none;
+  + label {
+    color: $primary-color;
+    border-bottom: dashed 1px #99cbed;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover {
+      color: $primary-color;
+      border-bottom-color: #f6d7d7;
+    }
+  }
+}
+
 .button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 0 1.25rem;
+  line-height: 2rem;
   outline: none;
   border: none;
+  border-radius: .25rem;
   background-color: $primary-color;
+  text-align: center;
   color: $white;
+  font-size: .875rem;
+  white-space: nowrap;
   cursor: pointer;
   transition: all .2s;
+  .fa {
+    margin-right: .5rem;
+  }
   &:hover {
-    background-color: $primary-darker;
+    background: $primary-lighter;
     color: $white;
+  }
+  &:active {
+    background: $primary-darker;
+  }
+  &.disabled {
+    background-color: $grey-300;
+    color: $grey-text;
+    cursor: default;
+  }
+  &.grey {
+    background: $grey-500;
+    &:hover {
+      background: $grey-400;
+    }
+    &:active {
+      background: $grey-600;
+    }
+  }
+  &.white {
+    background-color: $white;
+    color: $primary-color;
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
   }
 }

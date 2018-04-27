@@ -1,21 +1,6 @@
-/*Browser Upgrade*/
+/*Libraries*/
 
-.browserupgrade {
-  margin: 0;
-  padding: 15px;
-  background: $red;
-  color: $white;
-  text-align: center;
-  a {
-    font-weight: bold;
-    text-decoration: underline;
-    &:hover {
-      color: inherit;
-    }
-  }
-}
-
-/*Slick-Carousel*/
+/*Slick Carousel*/
 
 .slick-slide:focus {
   outline: none;
@@ -25,9 +10,9 @@
   position: absolute;
   z-index: 2;
   top: 50%;
-  margin-top: -15px;
-  width: 20px;
-  height: 30px;
+  margin-top: -1rem;
+  width: 1rem;
+  height: 2rem;
   background: url("../images/arrow.svg") no-repeat center;
   background-size: contain;
   cursor: pointer;
@@ -39,12 +24,12 @@
 }
 
 .slick-prev {
-  left: 30px;
+  left: 2rem;
   transform: rotate(180deg);
 }
 
 .slick-next {
-  right: 30px;
+  right: 2rem;
 }
 
 .slick-dots {
@@ -52,17 +37,17 @@
   padding: 0;
   overflow: hidden;
   position: absolute;
-  bottom: 20px;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   li {
     float: left;
     display: block;
-    margin: 0 5px;
+    margin: 0 .375rem;
     .slick-dot {
       display: block;
-      width: 10px;
-      height: 10px;
+      width: .75rem;
+      height: .75rem;
       border: solid 1px $primary-color;
       border-radius: 50%;
       cursor: pointer;

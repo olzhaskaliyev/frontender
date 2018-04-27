@@ -1,0 +1,60 @@
+extends templates/layout
+block content
+
+  div.slider.img-box(style='background-image: url("images/article4.jpg")')
+    - for (i = 0; i < 3; i++)
+      .slide
+        .container
+          .row
+            .col-md-6
+              h1.header: a(href='product.html') Frontender 2018
+              .description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa dolores et ex expedita illo impedit in iure magnam nemo nostrum obcaecati porro reiciendis rem, repellendus, suscipit veniam voluptates voluptatibus.
+              .to-basket.button(onclick='this.innerHTML = this.innerHTML === "Buy" ? "In basket" : "Buy"; return false') Buy
+            .col-md-6
+              a.img-box(href='product.html'): img(src='images/product.png')
+
+  section.bestsellers
+    .container
+      h2.header: a(href='products.html') Bestsellers
+      .carousel
+        - for (i = 0; i < 6; i++)
+          .slide
+            .product-card
+              a.img-box(href='product.html'): img(src='images/product.png')
+              h6.title: a(href='product.html') Lorem ipsum dolor
+              .description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dignissimos possimus vitae. Eligendi neque recusandae reiciendis.
+              footer.footer
+                .price 4 500 $
+                .to-basket.button(onclick='this.innerHTML = this.innerHTML === "Buy" ? "In basket" : "Buy"; return false') Buy
+  hr
+  section.articles-index
+    .container
+      h2.header: a(href='articles.html') News
+      .row
+        - for (i = 0; i < 6; i++)
+          .col-md-4
+            .article-card
+              a.img-box(href='article.html', style='background-image: url("images/article4.jpg");')
+              h5.title: a(href='article.html') Lorem ipsum dolor
+              .description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dignissimos possimus vitae. Eligendi neque recusandae reiciendis.
+
+  section.about-index.grey-background
+    .container
+      h2.header: a(href='about.html') Frontender 2018
+      .body
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi incidunt iure maxime non sit sunt. Ab autem eaque, enim est fugiat natus nostrum quaerat sit tempora tempore. Eius, recusandae rem.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, cupiditate, placeat. Dolores in inventore itaque iusto perferendis similique vel! A, alias consequuntur iste labore nihil nostrum perferendis placeat temporibus vero?
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, assumenda aut consequatur corporis cumque dolore dolorum exercitationem in nihil obcaecati, optio pariatur perspiciatis possimus quo, tenetur velit veniam? Amet, nam!
+      .socials
+        a.button
+          i.fa.fa-facebook
+          | Facebook
+        a.button
+          i.fa.fa-twitter
+          | Twitter
+        a.button
+          i.fa.fa-instagram
+          | Instagram
+        a.button
+          i.fa.fa-telegram
+          | Telegram

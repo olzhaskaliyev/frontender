@@ -1,15 +1,34 @@
-.page-title {
-  margin-top: 0;
-  margin-bottom: 20px;
-  line-height: 30px;
-  font-size: 24px;
-  font-weight: bold;
+/*Components*/
+
+section {
+  padding: 1.5rem 0;
+  &:first-of-type {
+    padding-top: 3rem;
+  }
+  &:last-of-type {
+    padding-bottom: 3rem;
+  }
+  &.grey-background {
+    margin: 1.5rem 0;
+    padding: 3rem 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  + hr {
+    margin-top: 1.5rem;
+    + section {
+      padding-top: 3rem;
+    }
+  }
 }
 
 .img-box {
   display: block;
   position: relative;
-  margin: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,30 +51,55 @@ a.img-box {
   }
 }
 
-.pager {
-  margin: $regular-margin 0;
-  text-align: center;
-  cursor: default;
-  a {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    &:hover {
-      color: inherit;
+.block {
+  padding: 1rem;
+  border-radius: .25rem;
+  background: $grey-100;
+}
+
+.breadcrumbs {
+  margin-bottom: 2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: solid 1px $divide;
+  color: $grey-text;
+  font-size: .875rem;
+  ul {
+    display: flex;
+  }
+  li {
+    &:after {
+      content: '>';
+      margin: 0 .5rem;
     }
-    &.active {
-      background: $primary-color;
-      color: $white;
-    }
-    &.disable {
-      color: $secondary-text;
-      &:hover {
-        background: inherit;
-        color: inherit;
-        cursor: default;
+    &:last-child {
+      color: $regular-text-color;
+      &:after {
+        display: none;
       }
+    }
+  }
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  li {
+    margin-right: .5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    display: block;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: 3px;
+    background: $grey-100;
+    text-align: center;
+    font-size: .875rem;
+    &:hover, &.active {
+      background: $primary-color;
     }
   }
 }

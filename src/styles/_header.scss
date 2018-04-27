@@ -1,6 +1,12 @@
-header {
+/*Header*/
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 1rem;
+  border-bottom: solid 1px $divide;
   background-color: $white;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
   .container {
     display: flex;
     justify-content: space-between;
@@ -8,15 +14,11 @@ header {
   }
   .logo {
     color: $primary-color;
-    font-size: 24px;
-  }
-  nav {
-    display: flex;
-    a {
-      padding: 20px;
-      &:hover {
-        background-color: $grey-200;
-      }
+    font-family: $display-font;
+    font-size: 2rem;
+    line-height: 1;
+    &:hover {
+      color: $primary-lighter;
     }
   }
 }

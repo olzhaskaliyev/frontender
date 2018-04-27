@@ -1,16 +1,26 @@
+/*Variables, Resets and Libraries*/
 @import "colors";
 @import "variables";
 @import "resets";
-@import "grid";
 @import "fonts";
 @import "libraries";
+
+/*Layout*/
+@import "layout";
+@import "grid";
+
+/*Common*/
+@import "forms";
 @import "components";
 @import "helpers";
-@import "forms";
-@import "layout";
+
+/*Modules*/
 @import "header";
 @import "footer";
 @import "index";
+@import "products";
 @import "articles";
+
+/*Adaptive*/
 @import "media-queries";
 @import "mobile-menu";

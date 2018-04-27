@@ -1,15 +1,17 @@
+/*Grid*/
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: $regular-margin;
-  padding-right: $regular-margin;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -$regular-margin;
-  margin-right: -$regular-margin;
+  margin-left: -1rem;
+  margin-right: -1rem;
   &.no-margin {
     margin-left: 0;
     margin-right: 0;
@@ -17,11 +19,43 @@
       padding-left: 0;
       padding-right: 0;
       .row {
-        margin-left: -$regular-margin;
-        margin-right: -$regular-margin;
+        margin-left: -1rem;
+        margin-right: -1rem;
         [class*=col-] {
-          padding-left: $regular-margin;
-          padding-right: $regular-margin;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+  &.half-margin {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    [class*=col-] {
+      padding-left: .5rem;
+      padding-right: .5rem;
+      .row {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        [class*=col-] {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+  &.double-margin {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    [class*=col-] {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      .row {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        [class*=col-] {
+          padding-left: 1rem;
+          padding-right: 1rem;
         }
       }
     }
@@ -30,11 +64,11 @@
 
 [class*=col-] {
   flex: 0 0 auto;
-  padding-left: $regular-margin;
-  padding-right: $regular-margin;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-/*mobile*/
+/*Mobile*/
 .col-xs-1 { flex-basis: 8.33333333%; max-width: 8.33333333%; }
 .col-xs-2 { flex-basis: 16.66666667%; max-width: 16.66666667%; }
 .col-xs-2h { flex-basis: 20%; max-width: 20%; }
@@ -49,7 +83,7 @@
 .col-xs-11 { flex-basis: 91.66666667%; max-width: 91.66666667%; }
 .col-xs-12 { flex-basis: 100%; max-width: 100%; }
 
-/*tablet (portrait)*/
+/*Tablet (portrait)*/
 @media (min-width: 768px) {
   .col-sm-1 { flex-basis: 8.33333333%; max-width: 8.33333333%; }
   .col-sm-2 { flex-basis: 16.66666667%; max-width: 16.66666667%; }
@@ -66,7 +100,7 @@
   .col-sm-12 { flex-basis: 100%; max-width: 100%; }
 }
 
-/*tablet (album)*/
+/*Tablet (album)*/
 @media (min-width: 992px) {
   .col-md-1 { flex-basis: 8.33333333%; max-width: 8.33333333%; }
   .col-md-2 { flex-basis: 16.66666667%; max-width: 16.66666667%; }
@@ -83,15 +117,15 @@
   .col-md-12 { flex-basis: 100%; max-width: 100%; }
 }
 
-/*screen (hd)*/
+/*Laptop*/
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: 75rem;
   }
   .container.fluid {
     max-width: none;
-    padding-left: $regular-margin*2;
-    padding-right: $regular-margin*2;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .col-lg-1 { flex-basis: 8.33333333%; max-width: 8.33333333%; }
   .col-lg-2 { flex-basis: 16.66666667%; max-width: 16.66666667%; }
@@ -108,9 +142,9 @@
   .col-lg-12 { flex-basis: 100%; max-width: 100%; }
 }
 
-/*screen (fullhd)*/
+/*Screen FullHD*/
 @media (min-width: 1600px) {
   .container.wide {
-    max-width: 1600px;
+    max-width: 100rem;
   }
 }

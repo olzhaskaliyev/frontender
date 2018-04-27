@@ -1,3 +1,5 @@
+/*Resets*/
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -9,21 +11,35 @@ a {
   &:hover {
     color: $primary-color;
   }
-  &:hover, &:active {
-    outline-width: 0;
+}
+
+p a {
+  color: $primary-color;
+  &:hover {
+    color: $primary-lighter;
   }
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  margin: 0 0 $regular-margin;
+  margin-top: 0;
 }
 
-h1 { font-size: 32px; }
-h2 { font-size: 28px; }
-h3 { font-size: 24px; }
-h4 { font-size: 18px; }
-h5 { font-size: 16px; }
-h6 { font-size: 16px; }
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+h1, h2, h3 {
+  margin-bottom: 1.75rem;
+  font-family: $header-font;
+  line-height: 1;
+}
+
+h4, h5, h6, p {
+  margin-bottom: 1rem;
+}
 
 ul {
   margin: 0;
@@ -32,15 +48,6 @@ ul {
 
 li {
   display: block;
-}
-
-hr {
-  margin: 0;
-  line-height: 0;
-  height: 1px;
-  border: none;
-  color: $divide;
-  background-color: $divide;
 }
 
 img {
@@ -55,4 +62,13 @@ table {
   th {
     padding: 0;
   }
+}
+
+hr {
+  margin: 0;
+  line-height: 0;
+  height: 1px;
+  border: none;
+  color: $divide;
+  background-color: $divide;
 }

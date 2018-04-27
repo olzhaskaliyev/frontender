@@ -1,0 +1,78 @@
+extends templates/layout
+block content
+
+  .breadcrumbs
+    .container
+      ul
+        li: a(href='/') Index
+        li: a(href='/') Products
+
+  .container
+    h1.heading Products
+    .row
+      aside.col-md-3
+        form.filter
+          h4.heading Products filter
+          .filter-section
+            h6.title Input Text Field
+            - for (i = 0; i < 2; i++)
+              label Input label
+              input(type='text')
+          .filter-section
+            h6.title Select Field
+            label Input label
+            - for (i = 0; i < 3; i++)
+              select
+                option Option 1
+                option Option 2
+                option Option 3
+                option Option 4
+          .filter-section
+            h6.title Checkbox Parameters
+            ul.checkboxes
+              - for (i = 1; i < 5; i++)
+                li
+                  input(type='checkbox', name='cp', id='cp'+i)
+                  label(for='cp'+i) Checkbox parameter #{i}
+          .filter-section
+            h6.title Radio Parameters
+            ul.checkboxes
+              - for (i = 1; i < 5; i++)
+                li
+                  input(type='radio', name='rp', id='rp' + i)
+                  label(for='rp'+i) Radio parameter #{i}
+          .filter-footer
+            input(type='submit', class='button', value='Применить')
+            input(type='reset', class='button grey')
+      main.col-md-9
+        .row
+          - for (i = 0; i < 12; i++)
+            .col-md-4
+              .product-card
+                a.img-box(href='product.html'): img(src='images/product.png')
+                h6.title: a(href='product.html') Lorem ipsum dolor
+                .description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dignissimos possimus vitae. Eligendi neque recusandae reiciendis.
+                footer.footer
+                  .price 4 500 $
+                  .to-basket.button(onclick='this.innerHTML = this.innerHTML === "Buy" ? "In basket" : "Buy"; return false') Buy
+        ul.pager
+          li: a(href='', class='active') 1
+          li: a(href='') 2
+          li: a(href='') 3
+          li: a(href='') ...
+          li: a(href='') 12
+
+
+  section.bestsellers
+    .container
+      h2.header: a(href='products.html') Bestsellers
+      .carousel
+        - for (i = 0; i < 6; i++)
+          .slide
+            .product-card
+              a.img-box(href='product.html'): img(src='images/product.png')
+              h6.title: a(href='product.html') Lorem ipsum dolor
+              .description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dignissimos possimus vitae. Eligendi neque recusandae reiciendis.
+              footer.footer
+                .price 4 500 $
+                .to-basket.button(onclick='this.innerHTML = this.innerHTML === "Buy" ? "In basket" : "Buy"; return false') Buy

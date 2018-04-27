@@ -1,17 +1,19 @@
-footer {
-  background-color: $blue-grey-900;
+/*Footer*/
+
+.site-footer {
+  padding: 1.25rem;
+  background-color: $grey-900;
   color: $white;
-  font-size: 14px;
+  font-size: .875rem;
   .container {
     display: flex;
-    height: 50px;
     justify-content: space-between;
     align-items: center;
   }
   a {
-    color: $primary-lighter;
+    color: $primary-color;
     &:hover {
-      color: inherit;
+      color: $primary-lighter;
     }
   }
 }

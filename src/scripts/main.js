@@ -1,25 +1,5 @@
 $(document).ready(function () {
 
-    /*footer*/
-
-    let autoFooterHeight = function () {
-        let footerHeight = $('footer').outerHeight();
-        let screenWidth = screen.width;
-        if (screenWidth >= 767) {
-            $('body').css({
-                'paddingBottom': footerHeight
-            });
-        } else {
-            $('body').css({
-                'paddingBottom': 0
-            });
-        }
-    };
-    autoFooterHeight();
-    $(window).resize(function () {
-        autoFooterHeight();
-    });
-
     /*mobile-menu*/
 
     let mobileMenu = $('.mobile-menu');
