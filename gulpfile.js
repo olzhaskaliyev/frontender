@@ -41,7 +41,8 @@ gulp.task('default', () => {
         routes: {
           '/bower_components': 'bower_components'
         }
-      }
+      },
+      ghostMode: false
     });
     gulp.watch([
       'src/*.html',
@@ -86,8 +87,7 @@ gulp.task('minimization', ['templates', 'styles', 'scripts'], () => {
 gulp.task('templates', () => {
   return gulp.src('src/*.pug')
     .pipe($.plumber())
-    .pipe($.pug())
-    .pipe($.htmlBeautify())
+    .pipe($.pug({pretty: true}))
     .pipe(gulp.dest('.tmp'));
 });
 
@@ -95,8 +95,7 @@ gulp.task('templates:cache', () => {
   return gulp.src('src/*.pug')
     .pipe($.plumber())
     .pipe($.cached())
-    .pipe($.pug())
-    .pipe($.htmlBeautify())
+    .pipe($.pug({pretty: true}))
     .pipe(gulp.dest('.tmp'))
     .pipe(browserSync.reload({stream: true}));
 });
