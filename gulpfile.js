@@ -5,6 +5,7 @@ const del = require('del');
 const wiredep = require('wiredep').stream;
 const mainBowerFiles = require('main-bower-files');
 const browserSync = require('browser-sync').create();
+
 let dev = true;
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
@@ -32,7 +33,7 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('default', () => {
-  runSequence('clean', 'wiredep', ['templates:cache', 'styles', 'scripts'], () => {
+  runSequence('clean', 'wiredep', ['templates:cache', 'html', 'styles', 'scripts'], () => {
     browserSync.init({
       notify: false,
       port: 9000,
@@ -44,17 +45,14 @@ gulp.task('default', () => {
       },
       ghostMode: false
     });
-    gulp.watch([
-      'src/*.html',
-      'src/images/**/*',
-      'src/fonts/**/*'
-    ]).on('change', browserSync.reload);
 
     gulp.watch('bower.json', ['wiredep']);
     gulp.watch('src/*.pug', ['templates:cache']);
     gulp.watch('src/templates/**/*.pug', ['templates', browserSync.reload]);
-    gulp.watch('src/styles/**/*.scss', ['styles']);
+    gulp.watch('src/*.html', ['html', browserSync.reload]);
+    gulp.watch('src/styles/**/_*.scss', ['styles']);
     gulp.watch('src/scripts/**/*.js', ['scripts']);
+    gulp.watch(['src/*.html', 'src/images/**/*', 'src/fonts/**/*']).on('change', browserSync.reload);
   });
 });
 
@@ -69,17 +67,15 @@ gulp.task('serve:dist', ['build'], () => {
   browserSync.init({
     notify: false,
     port: 9000,
-    server: {
-      baseDir: ['dist']
-    }
+    server: { baseDir: ['dist'] }
   });
 });
 
-gulp.task('minimization', ['templates', 'styles', 'scripts'], () => {
-  return gulp.src(['src/*.html', '.tmp/*.html'])
-    .pipe($.useref({searchPath: ['.tmp', 'src', '.']}))
-    .pipe($.if(/\.css$/, $.cache($.cssnano({safe: true, autoprefixer: false}))))
-    .pipe($.if(/\.js$/, $.cache($.uglify({compress: {drop_console: true}}))))
+gulp.task('minimization', ['templates', 'html', 'styles', 'scripts'], () => {
+  return gulp.src('.tmp/*.html')
+    .pipe($.useref({searchPath: ['.tmp', '.']}))
+    .pipe($.if(/\.css$/, gulp.dest('dist')))
+    .pipe($.if(/\.js$/, gulp.dest('dist')))
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'minimized', showFiles: true}));
 });
@@ -100,6 +96,11 @@ gulp.task('templates:cache', () => {
     .pipe(browserSync.reload({stream: true}));
 });
 
+gulp.task('html', () => {
+  return gulp.src('src/*.html')
+    .pipe(gulp.dest('.tmp'))
+});
+
 gulp.task('styles', () => {
   return gulp.src('src/styles/*.scss')
     .pipe($.plumber())
@@ -109,6 +110,7 @@ gulp.task('styles', () => {
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
+    .pipe($.remToPx())
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.if(dev, $.sourcemaps.write()))
     .pipe(gulp.dest('.tmp/styles'))
@@ -118,10 +120,8 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
   return gulp.src('src/scripts/**/*.js')
     .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.babel())
-    .pipe($.if(dev, $.sourcemaps.write('.')))
-    .pipe(gulp.dest('.tmp/scripts'))
+    .pipe(gulp.dest('dist/scripts'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -141,6 +141,6 @@ gulp.task('fonts', () => {
 });
 
 gulp.task('extras', () => {
-  return gulp.src(['src/*', '!src/*.html', '!src/*.pug'], {dot: true})
+  return gulp.src(['src/*.*', '!src/*.pug', '!src/*.html'], {dot: true})
     .pipe(gulp.dest('dist'));
 });

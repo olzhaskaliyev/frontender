@@ -11,9 +11,9 @@
     align-items: center;
   }
   a {
-    color: $primary-color;
+    color: $brand-color;
     &:hover {
-      color: $primary-lighter;
+      color: $brand-color;
     }
   }
 }

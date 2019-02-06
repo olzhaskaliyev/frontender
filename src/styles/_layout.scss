@@ -1,16 +1,8 @@
 /*Layout*/
 
 /*Base*/
-html {
-  height: 100%;
-  line-height: $regular-line;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  min-height: 100%;
+  background-color: $light;
   color: $regular-text-color;
   font-family: $regular-font;
   font-size: $regular-font-size;

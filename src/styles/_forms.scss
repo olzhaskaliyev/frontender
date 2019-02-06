@@ -3,12 +3,21 @@
 input[type="text"],
 input[type="search"],
 input[type="email"],
+input[type="url"],
+input[type="tel"],
 input[type="number"],
+input[type="password"],
+input[type="time"],
 input[type="date"],
 input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+.input,
 select,
+.select,
 textarea {
-  margin-bottom: .5rem;
+  display: block;
   width: 100%;
   height: 2rem;
   outline: none;
@@ -17,8 +26,14 @@ textarea {
   padding-right: .5rem;
   border-radius: .25rem;
   transition: border-color .2s;
+  &::placeholder, .placeholder {
+    color: $secondary-text-color;
+  }
+  .placeholder {
+    pointer-events: none;
+  }
   &:focus {
-    border-color: $primary-color;
+    border-color: $brand-color;
   }
 }
 
@@ -60,7 +75,7 @@ input[type="radio"] {
       width: .625rem;
       height: .625rem;
       border-radius: 2px;
-      background-color: $primary-color;
+      background-color: $brand-color;
       opacity: 0;
       transition: opacity .2s;
     }
@@ -80,12 +95,12 @@ input[type="radio"] + label:after {
 input[type="file"] {
   display: none;
   + label {
-    color: $primary-color;
+    color: $brand-color;
     border-bottom: dashed 1px #99cbed;
     cursor: pointer;
     transition: all .2s;
     &:hover {
-      color: $primary-color;
+      color: $brand-color;
       border-bottom-color: #f6d7d7;
     }
   }
@@ -93,48 +108,28 @@ input[type="file"] {
 
 .button {
   display: inline-block;
-  padding: 0 1.25rem;
-  line-height: 2rem;
+  padding: .5rem 1rem;
   outline: none;
   border: none;
   border-radius: .25rem;
-  background-color: $primary-color;
+  background-color: $brand-color;
   text-align: center;
   color: $white;
   font-size: .875rem;
-  white-space: nowrap;
+  font-weight: 600;
+  line-height: 1rem;
   cursor: pointer;
   transition: all .2s;
-  .fa {
-    margin-right: .5rem;
-  }
   &:hover {
-    background: $primary-lighter;
+    background: $brand-color-lighter;
     color: $white;
   }
   &:active {
-    background: $primary-darker;
+    background: $brand-color-darker;
   }
   &.disabled {
-    background-color: $grey-300;
-    color: $grey-text;
+    background-color: $light;
+    color: $grey;
     cursor: default;
-  }
-  &.grey {
-    background: $grey-500;
-    &:hover {
-      background: $grey-400;
-    }
-    &:active {
-      background: $grey-600;
-    }
-  }
-  &.white {
-    background-color: $white;
-    color: $primary-color;
-    &:hover {
-      background-color: $primary-color;
-      color: $white;
-    }
   }
 }

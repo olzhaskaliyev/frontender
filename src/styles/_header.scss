@@ -13,12 +13,12 @@
     align-items: center;
   }
   .logo {
-    color: $primary-color;
+    color: $brand-color;
     font-family: $display-font;
     font-size: 2rem;
     line-height: 1;
     &:hover {
-      color: $primary-lighter;
+      color: $brand-color;
     }
   }
 }

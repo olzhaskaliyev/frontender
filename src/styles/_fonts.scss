@@ -1,16 +1,52 @@
 /*Fonts*/
 
-/*Blade Runner*/
-
+/*Proxima Nova*/
 @font-face {
-  font-family: 'Blade Runner';
-  src: local('Blade Runner'),
-  url('../fonts/BladeRunner.ttf') format('truetype');
-  unicode-range: U+020-07F, U+410-44F; //Latin & Cyrillic scripts
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Regular.woff2') format('woff2'),
+  url('/fonts/ProximaNova-Regular.woff') format('woff'),
+  url('/fonts/ProximaNova-Regular.ttf') format('truetype');
 }
 
-/*Typography*/
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  src: url('/fonts/ProximaNova-RegularItalic.woff2') format('woff2'),
+  url('/fonts/ProximaNova-RegularItalic.woff') format('woff'),
+  url('/fonts/ProximaNova-RegularItalic.ttf') format('truetype');
+}
 
-b, strong {
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  src: url('/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+  url('/fonts/ProximaNova-Semibold.woff') format('woff'),
+  url('/fonts/ProximaNova-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  font-style: italic;
+  src: url('/fonts/ProximaNova-SemiboldItalic.woff2') format('woff2'),
+  url('/fonts/ProximaNova-SemiboldItalic.woff') format('woff'),
+  url('/fonts/ProximaNova-SemiboldItalic.ttf') format('truetype');
+}
+
+/*Futura PT*/
+@font-face {
+  font-family: 'Futura PT';
+  font-weight: 600;
+  src: url('/fonts/FuturaPT-Demi.woff2') format('woff2'),
+  url('/fonts/FuturaPT-Demi.woff') format('woff'),
+  url('/fonts/FuturaPT-Demi.ttf') format('truetype');
+}
+
+/*Bebas Neue*/
+@font-face {
+  font-family: 'Bebas Neue';
   font-weight: bold;
+  src: url('/fonts/BebasNeue-Bold.woff2') format('woff2'),
+  url('/fonts/BebasNeue-Bold.woff') format('woff'),
+  url('/fonts/BebasNeue-Bold.ttf') format('truetype');
 }

@@ -4,7 +4,6 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "normalize-css": "^8.0.0",
-    "font-awesome": "^4.7.0",
     "slick-carousel": "^1.8.1"
   },
   "overrides": {
@@ -22,7 +21,7 @@
     "slick-carousel": {
       "main": [
         "slick/slick.css",
-        "slick/slick.min.js",
+        "slick/slick.js",
         "slick/ajax-loader.gif",
         "slick/fonts/*"
       ]

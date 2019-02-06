@@ -1,19 +1,37 @@
-//Brand Colors
-$primary-lighter: $pink-400;
-$primary-color: $pink;
-$primary-darker: $pink-600;
+//Colors
+$black-80: rgba(0, 0, 0, .8); // 333
+$black-40: rgba(0, 0, 0, .4); // 999
+$black-20: rgba(0, 0, 0, .2); // ccc
+$black-10: rgba(0, 0, 0, .1);
+$white-60: rgba(255, 255, 255, .6);
+$white-40: rgba(255, 255, 255, .4);
+$white-10: rgba(255, 255, 255, .1);
 
-//Default Colors
-$dark-text: $grey-900;
-$grey-text: $grey-600;
-$divide: $grey-300;
+$dark: $black-80;
+$grey: $black-40;
+$light-grey: $black-20;
+$light: #f4f4f4;
+$light-darker: #e8e8e8;
+$divide: $black-10;
+$divide-light: $white-10;
+
+$brand-color: rgb(208, 2, 27);
+$brand-color-lighter: rgb(217, 52, 73);
+$brand-color-darker: rgb(186, 2, 24);
 
 //Fonts
-$regular-text-color: $dark-text;
-$regular-font: 'Roboto', sans-serif;
-$header-font: 'Roboto Slab', serif;
-$display-font: 'Blade Runner', serif;
-$regular-font-size: 1rem;
-$regular-line: 1.4;
-$header-line: 1.1;
-$paragraph-line: 1.5;
+$regular-text-color: $dark;
+$secondary-text-color: $grey;
+$regular-font: "Proxima Nova", sans-serif;
+$header-font: "Futura PT", sans-serif;
+$display-font: "Bebas Neue", sans-serif;
+$icon-font: "Site Icons", sans-serif;
+$regular-font-size: .875rem;
+$regular-line: 1rem;
+$heading-line: 1.25rem;
+$paragraph-line: 1.5rem;
+
+//Screens
+$tablet: 744px;
+$tablet-album: 984px;
+$desktop: 1080px;

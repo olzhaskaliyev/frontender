@@ -48,14 +48,14 @@
       display: block;
       width: .75rem;
       height: .75rem;
-      border: solid 1px $primary-color;
+      border: solid 1px $brand-color;
       border-radius: 50%;
       cursor: pointer;
       transition: background-color .2s;
     }
     &.slick-active .slick-dot,
     &:hover .slick-dot {
-      background-color: $primary-color;
+      background-color: $brand-color;
     }
   }
 }

@@ -1,26 +1,5 @@
 $(document).ready(function () {
 
-    /*mobile-menu*/
-
-    let mobileMenu = $('.mobile-menu');
-    $('.burger').click(function () {
-        $(this).toggleClass('active');
-        mobileMenu.toggleClass('active');
-    });
-    let mobileMenuConstructor = function () {
-        if (screen.width < 767) {
-            $('header .login').prependTo(mobileMenu);
-            $('.navigation').appendTo(mobileMenu);
-        } else {
-            $('header .login').appendTo($('header .top-header .container'));
-            $('.navigation').prependTo($('.navigation-wrap'));
-        }
-    };
-    mobileMenuConstructor();
-    $(window).resize(function () {
-        mobileMenuConstructor();
-    });
-
     /*sliders*/
 
     $('.slider').slick({
